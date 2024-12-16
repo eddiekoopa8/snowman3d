@@ -7,14 +7,17 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     Vector3 prevPos;
     public Transform cameraPos;
+    Rigidbody body;
     void Start()
     {
         prevPos = transform.position;
+        body = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        bool moving = Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow);
         if (Input.GetKey(KeyCode.UpArrow))
         {
             transform.Translate(transform.TransformDirection(new Vector3(0, 0, 0.3f)));
@@ -31,6 +34,20 @@ public class PlayerController : MonoBehaviour
         {
             transform.Translate(transform.TransformDirection(new Vector3(0.3f, 0, 0)));
         }
+
+        // Fix player moving by themself.
+        /*if (moving && body.velocity.x >= 0)
+        {
+            Vector3 newv = body.velocity;
+            newv.x = 0;
+            body.velocity = newv;
+        }
+        if (moving && body.velocity.y >= 0)
+        {
+            Vector3 newv = body.velocity;
+            newv.y = 0;
+            body.velocity = newv;
+        }*/
 
         /*if (Input.GetKey(KeyCode.LeftArrow))
         {

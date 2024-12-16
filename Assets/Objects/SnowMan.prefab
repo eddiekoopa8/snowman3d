@@ -117,6 +117,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3693482654891841025}
+  - component: {fileID: 8543889409909413260}
+  - component: {fileID: 5528349615137462408}
   m_Layer: 0
   m_Name: SnowMan
   m_TagString: Untagged
@@ -142,6 +144,39 @@ Transform:
   - {fileID: 8060699048515055180}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8543889409909413260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8584198589315585692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e37fc8e5d595d84ba0f489686faeda1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &5528349615137462408
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8584198589315585692}
+  m_Material: {fileID: 13400000, guid: 306b070bb1f5b9846a706f3384f9b31e, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 6, y: 20, z: 6}
+  m_Center: {x: 0, y: 10, z: 0}
 --- !u!1001 &1223231471570465232
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -157,6 +192,22 @@ PrefabInstance:
     - target: {fileID: 7513136096566716329, guid: dbe91ab5b94b4f94f9e4e751899a9512, type: 3}
       propertyPath: m_Name
       value: Snowhead
+      objectReference: {fileID: 0}
+    - target: {fileID: 8180490496345519740, guid: dbe91ab5b94b4f94f9e4e751899a9512, type: 3}
+      propertyPath: m_Drag
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8180490496345519740, guid: dbe91ab5b94b4f94f9e4e751899a9512, type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8180490496345519740, guid: dbe91ab5b94b4f94f9e4e751899a9512, type: 3}
+      propertyPath: m_AngularDrag
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8180490496345519740, guid: dbe91ab5b94b4f94f9e4e751899a9512, type: 3}
+      propertyPath: m_Constraints
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 9161607628715499420, guid: dbe91ab5b94b4f94f9e4e751899a9512, type: 3}
       propertyPath: m_LocalScale.x
@@ -210,7 +261,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8180490496345519740, guid: dbe91ab5b94b4f94f9e4e751899a9512, type: 3}
+    - {fileID: 1330673572153077616, guid: dbe91ab5b94b4f94f9e4e751899a9512, type: 3}
+    - {fileID: 3125705379234484462, guid: dbe91ab5b94b4f94f9e4e751899a9512, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -235,6 +289,22 @@ PrefabInstance:
     - target: {fileID: 7513136096566716329, guid: dbe91ab5b94b4f94f9e4e751899a9512, type: 3}
       propertyPath: m_Name
       value: Snowbody
+      objectReference: {fileID: 0}
+    - target: {fileID: 8180490496345519740, guid: dbe91ab5b94b4f94f9e4e751899a9512, type: 3}
+      propertyPath: m_Drag
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8180490496345519740, guid: dbe91ab5b94b4f94f9e4e751899a9512, type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8180490496345519740, guid: dbe91ab5b94b4f94f9e4e751899a9512, type: 3}
+      propertyPath: m_AngularDrag
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8180490496345519740, guid: dbe91ab5b94b4f94f9e4e751899a9512, type: 3}
+      propertyPath: m_Constraints
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 9161607628715499420, guid: dbe91ab5b94b4f94f9e4e751899a9512, type: 3}
       propertyPath: m_LocalScale.x
@@ -288,7 +358,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8180490496345519740, guid: dbe91ab5b94b4f94f9e4e751899a9512, type: 3}
+    - {fileID: 1330673572153077616, guid: dbe91ab5b94b4f94f9e4e751899a9512, type: 3}
+    - {fileID: 3125705379234484462, guid: dbe91ab5b94b4f94f9e4e751899a9512, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
